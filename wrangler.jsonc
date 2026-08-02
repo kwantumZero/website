@@ -1,0 +1,22 @@
+{
+  // Wrangler/OpenNext configuration for deploying to Cloudflare
+  // Replace the placeholders with your account details and routes.
+  "name": "kwantumzero-landing",
+  "compatibility_date": "2026-08-01",
+  "main": "./workers/waitlist-worker.js",
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "kwantumzero_waitlist"
+    }
+  ],
+  "routes": [
+    // Example: if deploying to a Pages Custom Domain, map /api/waitlist to the Worker
+    // "https://example.com/api/waitlist"
+  ],
+  "env": {
+    "production": {
+      // Add production-specific settings here
+    }
+  }
+}
