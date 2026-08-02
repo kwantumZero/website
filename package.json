@@ -1,0 +1,35 @@
+{
+  "name": "kwantumzero",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Post-Quantum Zero Trust Auditing for Kubernetes",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "pages:build": "npx @cloudflare/next-on-pages",
+    "preview": "npm run pages:build && wrangler pages dev .vercel/output/static --compatibility-flag=nodejs_compat",
+    "deploy": "npm run pages:build && wrangler pages deploy .vercel/output/static",
+    "db:migrate:local": "wrangler d1 execute kwantumzero-db --local --file=./schema.sql",
+    "db:migrate:remote": "wrangler d1 execute kwantumzero-db --remote --file=./schema.sql"
+  },
+  "dependencies": {
+    "next": "14.2.35",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "lucide-react": "^0.446.0"
+  },
+  "devDependencies": {
+    "@cloudflare/next-on-pages": "1.13.0",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.13",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "14.2.35",
+    "wrangler": "^3.80.0"
+  },
+  "engines": {
+    "node": ">=18.17.0"
+  }
+}
