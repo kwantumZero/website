@@ -3,7 +3,7 @@ import WaitlistForm from './WaitlistForm';
 
 export default function CTA() {
   return (
-    <section className="relative py-20 sm:py-28" aria-labelledby="cta-heading">
+    <section id="cta" className="relative py-20 sm:py-28" aria-labelledby="cta-heading">
       <div className="mx-auto max-w-4xl px-6 lg:px-8">
         <div className="glass-card relative overflow-hidden rounded-2xl px-6 py-14 text-center shadow-glow sm:px-14">
           <div
@@ -14,7 +14,7 @@ export default function CTA() {
             <Atom className="h-6 w-6" aria-hidden="true" />
           </span>
           <h2 id="cta-heading" className="relative mt-6 text-3xl font-bold tracking-tight text-primary sm:text-4xl">
-            Help secure Kubernetes before quantum computing arrives
+            Make your cluster quantum-ready, one finding at a time.
           </h2>
           <p className="relative mx-auto mt-4 max-w-xl text-base leading-7 text-secondary">
             Join the waitlist for early access to KwantumZero and start auditing your clusters for

@@ -1,11 +1,11 @@
-import { ShieldAlert, Sparkles } from 'lucide-react';
+import { ArrowRight, ShieldAlert, Sparkles } from 'lucide-react';
 import BackgroundGrid from './BackgroundGrid';
 import Terminal from './Terminal';
 import WaitlistForm from './WaitlistForm';
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden pb-20 pt-16 sm:pb-28 sm:pt-24" aria-labelledby="hero-heading">
+    <section className="relative overflow-hidden pb-16 pt-16 sm:pb-24 sm:pt-24" aria-labelledby="hero-heading">
       <BackgroundGrid />
       <div className="relative mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-2 lg:items-center lg:gap-12 lg:px-8">
         <div>
@@ -16,16 +16,17 @@ export default function Hero() {
 
           <h1
             id="hero-heading"
-            className="mt-6 text-4xl font-bold tracking-tight text-primary sm:text-5xl lg:text-[3.25rem] lg:leading-[1.1]"
+            className="mt-6 max-w-2xl text-4xl font-bold tracking-[-0.03em] text-primary sm:text-6xl sm:leading-[1.02]"
           >
-            Post-Quantum Zero Trust Auditing for Kubernetes
+            Find the encryption risks hiding in your clusters.
           </h1>
 
           <p className="mt-6 max-w-xl text-base leading-7 text-secondary sm:text-lg">
-            KwantumZero protects your Kubernetes infrastructure from{' '}
-            <span className="text-primary">Harvest Now, Decrypt Later</span> attacks. It automatically
-            discovers legacy TLS, audits Ingress Controllers, inspects Service Meshes, and verifies
-            enforcement of NIST-approved post-quantum cryptography &mdash; including{' '}
+            KwantumZero is the open-source Kubernetes security auditor for the post-quantum era. It helps
+            you prepare for <span className="text-primary">Harvest Now, Decrypt Later</span> attacks by
+            discovering legacy TLS, mapping exposure across your traffic edge, and showing your team exactly
+            what to fix before encrypted data becomes readable.{' '}
+            Built in Go as a Kubernetes Operator, it verifies NIST-approved algorithms &mdash; including{' '}
             <span className="text-primary">ML-KEM (Kyber)</span>.
           </p>
 
@@ -34,7 +35,16 @@ export default function Hero() {
             <span>Encrypted traffic captured today can be decrypted once quantum computers mature.</span>
           </div>
 
-          <div className="mt-8 max-w-lg">
+          <div className="mt-8 flex flex-wrap items-center gap-4 text-sm text-secondary">
+            <a href="#waitlist" className="group inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-3 font-semibold text-base transition-transform hover:-translate-y-0.5">
+              Join the early access list
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
+            </a>
+            <a href="#how-it-works" className="rounded-lg px-2 py-3 font-medium transition-colors hover:text-primary">
+              See how it works <span aria-hidden="true">↓</span>
+            </a>
+          </div>
+          <div className="mt-8 max-w-lg" id="waitlist">
             <WaitlistForm />
           </div>
         </div>

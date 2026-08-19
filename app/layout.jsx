@@ -1,17 +1,4 @@
-import { Inter, JetBrains_Mono } from 'next/font/google';
 import './globals.css';
-
-const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-inter',
-  display: 'swap'
-});
-
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ['latin'],
-  variable: '--font-jetbrains',
-  display: 'swap'
-});
 
 const siteUrl = 'https://kwantumzero.dev';
 const siteTitle = 'KwantumZero — Post-Quantum Zero Trust Auditing for Kubernetes';
@@ -85,7 +72,7 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable}`}>
+    <html lang="en">
       <body className="min-h-screen bg-base font-sans text-primary antialiased">
         <a
           href="#main-content"
