@@ -8,9 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "pages:build": "npx @cloudflare/next-on-pages",
-    "preview": "npm run pages:build && wrangler pages dev .vercel/output/static --compatibility-flag=nodejs_compat",
-    "deploy": "npm run pages:build && wrangler pages deploy .vercel/output/static"
+    "start": "caddy file-server --root out --listen :3000"
   },
   "dependencies": {
     "next": "14.2.35",
@@ -19,13 +17,11 @@
     "lucide-react": "^0.446.0"
   },
   "devDependencies": {
-    "@cloudflare/next-on-pages": "1.13.0",
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.47",
     "tailwindcss": "^3.4.13",
     "eslint": "^8.57.1",
-    "eslint-config-next": "14.2.35",
-    "wrangler": "^3.80.0"
+    "eslint-config-next": "14.2.35"
   },
   "engines": {
     "node": ">=18.17.0"

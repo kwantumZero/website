@@ -7,7 +7,7 @@ Harvest Now, Decrypt Later attacks and verify NIST-approved post-quantum cryptog
 ML-KEM (Kyber).
 
 This repository contains the marketing site, built with Next.js 14 (App Router), React 18,
-Tailwind CSS, and Lucide React, deployable to Cloudflare Pages. The site uses LinkedIn for contact
+Tailwind CSS, and Lucide React, deployable as a static export behind Caddy. The site uses LinkedIn for contact
 and does not collect or store user data.
 
 ## Tech stack
@@ -16,8 +16,8 @@ and does not collect or store user data.
 - React 18
 - Tailwind CSS
 - Lucide React (icons)
-- Cloudflare Pages
-- `@cloudflare/next-on-pages` (Cloudflare adapter)
+- Static Next.js export
+- Caddy web server
 
 No other UI libraries or animation frameworks are used.
 
@@ -31,21 +31,25 @@ npm run dev
 The site will be available at `http://localhost:3000`. It uses LinkedIn for contact and has no
 waitlist, API, database, or email collection.
 
-## Deploying to Cloudflare Pages
+## Deploying to an Oracle VM
 
-### Option A — GitHub integration (recommended)
-
-1. Push this repository to GitHub.
-2. In the Cloudflare dashboard, create a new Pages project and connect the repository.
-3. Set the build command to `npx @cloudflare/next-on-pages` and the output directory to
-   `.vercel/output/static`.
-4. Deploy.
-
-### Option B — CLI
+Build the static site:
 
 ```bash
-npm run deploy
+npm run build
 ```
+
+The generated files are in `out/`. Caddy can serve them directly:
+
+```caddy
+yourdomain.com {
+    root * /path/to/kwantumZero-website/out
+    file_server
+    try_files {path} {path}/ /index.html
+}
+```
+
+Caddy handles HTTPS automatically when your domain points to the VM and ports 80 and 443 are open.
 
 ## Project structure
 
@@ -53,8 +57,6 @@ npm run deploy
 app/
   layout.jsx               Root layout, metadata, fonts
   page.jsx                 Landing page composition
-  opengraph-image.jsx      Dynamic OG image
-  twitter-image.jsx        Dynamic Twitter card image
   sitemap.js                Sitemap route
   robots.js                 Robots route
 components/
