@@ -1,7 +1,8 @@
 import { ArrowRight, ShieldAlert, Sparkles } from 'lucide-react';
 import BackgroundGrid from './BackgroundGrid';
 import Terminal from './Terminal';
-import WaitlistForm from './WaitlistForm';
+
+const LINKEDIN_URL = 'https://www.linkedin.com/in/harishsudalaimani/';
 
 export default function Hero() {
   return (
@@ -11,7 +12,7 @@ export default function Hero() {
         <div>
           <div className="inline-flex items-center gap-2 rounded-full border border-border bg-surface/80 px-3.5 py-1.5 text-xs font-medium text-secondary">
             <Sparkles className="h-3.5 w-3.5 text-accent-green" aria-hidden="true" />
-            Open source &middot; Go &middot; Kubernetes Operator
+            Open source &middot; In active development
           </div>
 
           <h1
@@ -22,11 +23,11 @@ export default function Hero() {
           </h1>
 
           <p className="mt-6 max-w-xl text-base leading-7 text-secondary sm:text-lg">
-            KwantumZero is the open-source Kubernetes security auditor for the post-quantum era. It helps
-            you prepare for <span className="text-primary">Harvest Now, Decrypt Later</span> attacks by
-            discovering legacy TLS, mapping exposure across your traffic edge, and showing your team exactly
-            what to fix before encrypted data becomes readable.{' '}
-            Built in Go as a Kubernetes Operator, it verifies NIST-approved algorithms &mdash; including{' '}
+            KwantumZero is an open-source Kubernetes security auditor being built for the post-quantum era. It will help
+            teams prepare for <span className="text-primary">Harvest Now, Decrypt Later</span> attacks by
+            finding legacy TLS, mapping exposure across the traffic edge, and showing teams what to fix before
+            encrypted data becomes readable.{' '}
+            The first release is being built in Go as a Kubernetes Operator, with planned support for NIST-approved algorithms &mdash; including{' '}
             <span className="text-primary">ML-KEM (Kyber)</span>.
           </p>
 
@@ -36,16 +37,13 @@ export default function Hero() {
           </div>
 
           <div className="mt-8 flex flex-wrap items-center gap-4 text-sm text-secondary">
-            <a href="#waitlist" className="group inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-3 font-semibold text-base transition-transform hover:-translate-y-0.5">
-              Join the early access list
+            <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" className="group inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-3 font-semibold text-base transition-transform hover:-translate-y-0.5">
+              Contact me on LinkedIn
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
             </a>
             <a href="#how-it-works" className="rounded-lg px-2 py-3 font-medium transition-colors hover:text-primary">
               See how it works <span aria-hidden="true">↓</span>
             </a>
-          </div>
-          <div className="mt-8 max-w-lg" id="waitlist">
-            <WaitlistForm />
           </div>
         </div>
 

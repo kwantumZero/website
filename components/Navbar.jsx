@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Github, ShieldCheck, ArrowUpRight } from 'lucide-react';
+import { Github, ShieldCheck } from 'lucide-react';
 
 const GITHUB_URL = 'https://github.com/kwantumzero/kwantumzero';
 
@@ -28,13 +28,6 @@ export default function Navbar() {
             className="hidden items-center gap-1.5 rounded-md px-3 py-2 text-sm font-medium text-secondary transition-colors hover:text-primary sm:flex"
           >
             How it works
-          </a>
-          <a
-            href="#waitlist"
-            className="hidden items-center gap-1.5 rounded-md bg-accent-green px-3.5 py-2 text-sm font-semibold text-base transition-colors hover:bg-accent-green/90 md:flex"
-          >
-            Get early access
-            <ArrowUpRight className="h-3.5 w-3.5" aria-hidden="true" />
           </a>
           <a
             href={GITHUB_URL}

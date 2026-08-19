@@ -3,7 +3,7 @@ import './globals.css';
 const siteUrl = 'https://kwantumzero.dev';
 const siteTitle = 'KwantumZero — Post-Quantum Zero Trust Auditing for Kubernetes';
 const siteDescription =
-  'KwantumZero is an open-source Kubernetes Operator that audits Ingress Controllers, Service Meshes, and TLS configurations to protect infrastructure against Harvest Now, Decrypt Later attacks and verify NIST-approved post-quantum cryptography, including ML-KEM (Kyber).';
+  'KwantumZero is an open-source Kubernetes security auditor in development, designed to help teams find legacy TLS configurations and prepare for post-quantum cryptography.';
 
 export const metadata = {
   metadataBase: new URL(siteUrl),

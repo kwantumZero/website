@@ -6,21 +6,21 @@ const FEATURES = [
     accent: 'green',
     title: 'Automated Cluster Auditing',
     description:
-      'KwantumZero continuously scans your Kubernetes clusters, Ingress Controllers, Service Meshes, Gateway API resources, TLS certificates, and cryptographic configurations to identify security weaknesses within seconds.'
+      'The planned Operator will inspect Kubernetes clusters, Ingress Controllers, Service Meshes, Gateway API resources, TLS certificates, and cryptographic configurations.'
   },
   {
     icon: KeyRound,
     accent: 'blue',
     title: 'Post-Quantum Enforcement',
     description:
-      'Verify adoption of NIST-approved post-quantum cryptographic algorithms, including ML-KEM (Kyber), hybrid TLS key exchange, and TLS 1.3, across every workload and load balancer in your environment.'
+      'The roadmap includes checks for NIST-approved post-quantum algorithms, including ML-KEM (Kyber), hybrid TLS key exchange, and TLS 1.3.'
   },
   {
     icon: Boxes,
     accent: 'green',
     title: 'Kubernetes Native',
     description:
-      'Built entirely in Go and deployed as a lightweight, read-only Kubernetes Operator using standard CRDs. No sidecars, no application changes, no disruption to existing workloads.'
+      'The planned architecture is a lightweight, read-only Kubernetes Operator written in Go, using standard CRDs with no sidecars or application changes.'
   }
 ];
 
@@ -34,7 +34,7 @@ export default function Features() {
             From cluster inventory to a clear remediation plan.
           </h2>
           <p className="mt-4 text-base leading-7 text-secondary">
-            One read-only Operator gives platform teams a living view of where encryption is strong, outdated, or unverified.
+            The first release is being designed to give platform teams a living view of where encryption is strong, outdated, or unverified.
           </p>
         </div>
 

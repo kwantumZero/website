@@ -64,7 +64,7 @@ export default function Terminal() {
         <span className="h-3 w-3 rounded-full bg-accent-green/70" aria-hidden="true" />
         <div className="ml-2 flex items-center gap-1.5 text-xs text-secondary">
           <TerminalSquare className="h-3.5 w-3.5" aria-hidden="true" />
-          kwantumzero — zsh
+          kwantumzero — audit preview
         </div>
       </div>
       <div
@@ -72,6 +72,9 @@ export default function Terminal() {
         className="h-[360px] overflow-y-auto px-5 py-4 font-mono text-[13px] leading-6 sm:text-sm"
         aria-live="polite"
       >
+        <div className="mb-3 border-b border-border/70 pb-3 text-xs text-secondary">
+          Planned audit workflow · product preview
+        </div>
         {rendered.map((line, index) => (
           <TerminalLine key={index} line={line} />
         ))}

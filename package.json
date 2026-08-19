@@ -10,9 +10,7 @@
     "lint": "next lint",
     "pages:build": "npx @cloudflare/next-on-pages",
     "preview": "npm run pages:build && wrangler pages dev .vercel/output/static --compatibility-flag=nodejs_compat",
-    "deploy": "npm run pages:build && wrangler pages deploy .vercel/output/static",
-    "db:migrate:local": "wrangler d1 execute kwantumzero-db --local --file=./schema.sql",
-    "db:migrate:remote": "wrangler d1 execute kwantumzero-db --remote --file=./schema.sql"
+    "deploy": "npm run pages:build && wrangler pages deploy .vercel/output/static"
   },
   "dependencies": {
     "next": "14.2.35",

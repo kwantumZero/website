@@ -1,5 +1,6 @@
 import { Atom } from 'lucide-react';
-import WaitlistForm from './WaitlistForm';
+
+const GITHUB_URL = 'https://github.com/kwantumzero/kwantumzero';
 
 export default function CTA() {
   return (
@@ -17,12 +18,11 @@ export default function CTA() {
             Make your cluster quantum-ready, one finding at a time.
           </h2>
           <p className="relative mx-auto mt-4 max-w-xl text-base leading-7 text-secondary">
-            Join the waitlist for early access to KwantumZero and start auditing your clusters for
-            post-quantum readiness.
+            Follow development, share feedback, or talk about making your cluster quantum-ready.
           </p>
-          <div className="relative mx-auto mt-8 max-w-lg">
-            <WaitlistForm variant="cta" />
-          </div>
+          <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer" className="relative mx-auto mt-8 inline-flex items-center gap-2 rounded-lg bg-accent-green px-5 py-3 text-sm font-semibold text-base transition-colors hover:bg-accent-green/90">
+            Explore the project on GitHub
+          </a>
         </div>
       </div>
     </section>

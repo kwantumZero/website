@@ -1,7 +1,8 @@
-import { Github, ShieldCheck, ScrollText } from 'lucide-react';
+import { Github, ShieldCheck, ScrollText, Linkedin } from 'lucide-react';
 
 const GITHUB_URL = 'https://github.com/kwantumzero/kwantumzero';
 const LICENSE_URL = 'https://www.apache.org/licenses/LICENSE-2.0';
+const LINKEDIN_URL = 'https://www.linkedin.com/in/harishsudalaimani/';
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -20,11 +21,15 @@ export default function Footer() {
               </span>
             </div>
             <p className="mt-3 max-w-sm text-sm leading-6 text-secondary">
-              Open-source cloud security for the post-quantum era.
+              Open-source cloud security for the post-quantum era. Currently in development.
             </p>
           </div>
 
           <nav aria-label="Footer" className="flex flex-wrap items-center gap-x-6 gap-y-3">
+            <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-sm text-secondary transition-colors hover:text-primary">
+              <Linkedin className="h-4 w-4" aria-hidden="true" />
+              LinkedIn
+            </a>
             <a
               href={GITHUB_URL}
               target="_blank"
